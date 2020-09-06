@@ -34,7 +34,7 @@ return
 fi
 
 if [ ! -e ~/.jdkconfig ]; then
-sudo touch ~/.jdkconfig
+touch ~/.jdkconfig
 fi
 
 if [[ $(update-java-alternatives -l) != *"$JDK_DIR_NAME"* ]] || [[ $(update-alternatives --list java) != *"$JDK_DIR_NAME"* ]]; then
@@ -49,7 +49,7 @@ export PATH="$( echo $PATH| tr : '\n' |grep -v jdk | paste -s -d: )"
 sudo update-java-alternatives -s $JDK_DIR_NAME > /dev/null 2>&1
 export JAVA_HOME=$JDK_DIR_PATH$JDK_DIR_NAME	
 export PATH=$PATH:$JAVA_HOME/bin
-sudo bash -c 'echo "export JAVA_HOME='"$JDK_DIR_PATH$JDK_DIR_NAME"'" > ~/.jdkconfig'	
+echo "export JAVA_HOME='"$JDK_DIR_PATH$JDK_DIR_NAME"'" > ~/.jdkconfig	
 echo "JAVA_HOME= " $JAVA_HOME
 echo "PATH cleaned from old JDKs."
 echo "Added to PATH: "$JAVA_HOME/bin

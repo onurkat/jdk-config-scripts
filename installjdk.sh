@@ -106,7 +106,7 @@ if [ -d "$JDK_DIR_PATH$JDK_DIR_NAME" ]; then
 fi
 
 if [ ! -e ~/.jdkconfig ]; then
-sudo touch ~/.jdkconfig
+touch ~/.jdkconfig
 fi
 	
 echo "Do you want to set the newly installed JDK as your default JDK and update JAVA_HOME and PATH? [y/n]"
@@ -120,7 +120,7 @@ read INPUT2
 		echo "Cleaned PATH from old JDKs."
 		sudo update-java-alternatives -s $JDK_DIR_NAME > /dev/null 2>&1
 		export JAVA_HOME=$JDK_DIR_PATH$JDK_DIR_NAME
-		sudo bash -c 'echo "export JAVA_HOME='"$JDK_DIR_PATH$JDK_DIR_NAME"'" > ~/.jdkconfig'	
+		echo "export JAVA_HOME='"$JDK_DIR_PATH$JDK_DIR_NAME"'" > ~/.jdkconfig	
 		export PATH=$PATH:$JAVA_HOME/bin
 		break		
 		;;

@@ -68,7 +68,7 @@ if [ "$JAVA_HOME" = "$JDK_DIR_PATH$JDK_DIR_NAME" ]; then
 			export JAVA_HOME=$JDK_DIR_PATH$JDK_DIR_NAME	
 			export PATH=$PATH:$JAVA_HOME/bin
 			echo "JAVA_HOME= " $JAVA_HOME
-			sudo bash -c 'echo "export JAVA_HOME='"$JDK_DIR_PATH$JDK_DIR_NAME"'" > ~/.jdkconfig'	
+			echo "export JAVA_HOME='"$JDK_DIR_PATH$JDK_DIR_NAME"'" > ~/.jdkconfig	
 			echo "Added to PATH: "$JAVA_HOME"/bin"
 			java -version
 			javac -version
