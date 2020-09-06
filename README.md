@@ -35,6 +35,7 @@ sudo chmod +x *.sh
 sudo mv *.sh /usr/local/bin
 sudo rm -rf ~/jdk-config-scripts
 source ~/.bashrc
+cd ~/
 
 ```
 
