@@ -51,8 +51,8 @@ if [ "$JAVA_HOME" = "$JDK_DIR_PATH$JDK_DIR_NAME" ]; then
 	: > ~/.jdkconfig
 	export PATH="$( echo $PATH| tr : '\n' |grep -v "$JDK_DIR_NAME" | paste -s -d: )"
 	echo "Warning: You uninstalled your current default JDK. Currently, JAVA_HOME is empty and PATH doesn't contain any JDK!"
-	CHECK_DIR=$(/usr/lib/jvm/.*.jinfo > /dev/null 2>&1) 
-	if [ -e ${CHECK_DIR[0]} ]; then		
+	CHECK_DIR=(/usr/lib/jvm/.*.jinfo)
+	if [ -f ${CHECK_DIR[0]} ]; then
 	echo "You have at least one more JDK installed. Do you want to set one of them as default JDK, JAVA_HOME and configure your PATH? [Y/N]"
 	while : 
 	do
