@@ -48,7 +48,7 @@ fi
 
 if [ "$JAVA_HOME" = "$JDK_DIR_PATH$JDK_DIR_NAME" ]; then
 	JAVA_HOME=""
-	sudo bash -c ': > ~/.jdkconfig '
+	: > ~/.jdkconfig
 	export PATH="$( echo $PATH| tr : '\n' |grep -v "$JDK_DIR_NAME" | paste -s -d: )"
 	echo "Warning: You uninstalled your current default JDK. Currently, JAVA_HOME is empty and PATH doesn't contain any JDK!"
 	CHECK_DIR=$(/usr/lib/jvm/.*.jinfo > /dev/null 2>&1) 
