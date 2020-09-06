@@ -8,6 +8,7 @@ CHECK_DIR=(/usr/lib/jvm/.*.jinfo)
 if [ ! -f ${CHECK_DIR[0]} ]; then
 	echo "Your system does not have any version of JDK or the script failed to detect them!"
 	echo "You can use 'installjdk' to install Oracle JDKs with the .tar.gz file from https://www.oracle.com/java/technologies/javase-downloads.html"
+	echo "Or you can install OpenJDK too! All you need is a x64 .tar.gz JDK file."
 	return
 fi
 
