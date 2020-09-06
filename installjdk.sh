@@ -46,7 +46,9 @@ if [ "$CHECK_JDK_BIN" = "" ]; then
 fi
 
 JDK_DIR_PATH="/usr/lib/jvm/"
-
+if [ ! -d "$JDK_DIR_PATH"];then
+sudo mkdir -p "$JDK_DIR_PATH"
+fi
 PRIORITY=1000
 
 # .jinfo file creation:
