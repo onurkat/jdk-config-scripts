@@ -95,7 +95,7 @@ if [ -d "$JDK_DIR_PATH$JDK_DIR_NAME" ]; then
 	if [ -e "$JDK_DIR_PATH.$JDK_DIR_NAME".jinfo ]; then
 		if [[ $(update-java-alternatives -l) = *"$JDK_DIR_NAME"* ]] && [[ $(update-alternatives --list java) = *"$JDK_DIR_NAME"* ]]; then
 		echo "Mission successful! Installed JDK: $JDK_DIR_NAME"
-		SUCCESS=1;
+		
 		else
 			echo "Mission failed!"
 			return
