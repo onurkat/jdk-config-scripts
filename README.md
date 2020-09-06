@@ -6,9 +6,9 @@ Use following commands to setup for the scripts for easy access.
 
 Open new terminal.
 
-1. Install java-common if you don't have it already. 'sudo apt install java-common'
+1. Install `java-common` if you don't have it already. `sudo apt install java-common`
 
-2. Install git if you don't have it already. 'sudo apt install git'
+2. Install `git` if you don't have it already. `sudo apt install git`
 
 3. Clone this repo to your pc.
 ```
@@ -16,9 +16,9 @@ cd ~/
 git clone github.com/onurkat/jdk-config-scripts.git
 ```
 
-4. Open your ~/.bashrc with your favorite text editor. (vim, nano etc.) 'vim ~/.bashrc'
+4. Open your `~/.bashrc` with your favorite text editor. (vim, nano etc.) `vim ~/.bashrc`
 
-Add following text to your ~/.bashrc somewhere available.
+Add following text to your `~/.bashrc` somewhere available.
 
 ```
 source ~/.jdkconfig > /dev/null 2>&1
@@ -40,7 +40,7 @@ source ~/.bashrc
 
 You are good to go!
 
-Now you can use 'installjdk', 'uninstalljdk' and 'changejdk'.
+Now you can use `installjdk`, `uninstalljdk` and `changejdk`
 
 # How to Use
 
@@ -50,7 +50,7 @@ You need to sign up and log in for downloading the JDK files after Oracle's JDK 
 
 Please check the file name before downloading. It has to be x64 to run.
 
-2. Run 'installjdk'
+2. Run `installjdk`
 
 Press Y to continue to installation. A GUI window should pop up. Select the tar.gz file in the GUI window.
 
@@ -58,14 +58,14 @@ After the installation, the script will ask you that if you want to set the defa
 
 # Other Scripts
 
-1. 'changejdk'
+1. `changejdk`
 
 Use this script when you want to change your default JDK. Select it on the list and that's all.
 
-2. 'uninstalljdk'
+2. `uninstalljdk`
 
 Use this script to uninstall a JDK. Warning: Please use this uninstaller for the JDKs only installed manually.
 
-If you want to uninstall a JDK that you installed with a package, use: sudo apt purge <package_name>
+If you want to uninstall a JDK that you installed with a package, use: `sudo apt purge <package_name>`
 
 
