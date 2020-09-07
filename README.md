@@ -13,7 +13,7 @@ Open new terminal.
 3. Clone this repo to your pc.
 ```
 cd ~/
-git clone github.com/onurkat/jdk-config-scripts.git
+git clone https://github.com/onurkat/jdk-config-scripts.git
 ```
 
 4. Open your `~/.bashrc` with your favorite text editor. (vim, nano etc.) `vim ~/.bashrc`
