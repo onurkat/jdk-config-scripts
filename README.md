@@ -23,13 +23,13 @@ Install `ca-certificates-java`
 `sudo apt install ca-certificates-java`
 
 
-3. Clone this repo to your pc.
+2. Clone this repo to your pc.
 ```
 cd ~/
 git clone https://github.com/onurkat/jdk-config-scripts.git
 ```
 
-4. Open your `~/.bashrc` with your favorite text editor. (vim, nano etc.) `vim ~/.bashrc`
+3. Open your `~/.bashrc` with your favorite text editor. (vim, nano etc.) `vim ~/.bashrc`
 
 Add following text to your `~/.bashrc` somewhere available.
 
@@ -40,7 +40,7 @@ alias changejdk='source /usr/local/bin/changejdk.sh'
 alias installjdk='source /usr/local/bin/installjdk.sh'
 alias uninstalljdk='source /usr/local/bin/uninstalljdk.sh'
 ```
-5. Run these commands to move scripts to your system and make them executable.
+4. Run these commands to move scripts to your system and make them executable.
 
 ```
 cd ~/jdk-config-scripts
