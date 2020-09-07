@@ -46,6 +46,7 @@ alias uninstalljdk='source /usr/local/bin/uninstalljdk.sh'
 cd ~/jdk-config-scripts
 sudo chmod +x *.sh
 sudo mv *.sh /usr/local/bin
+cd ~/
 sudo rm -rf ~/jdk-config-scripts
 source ~/.bashrc
 cd ~/
