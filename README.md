@@ -6,9 +6,22 @@ Use following commands to setup for the scripts for easy access.
 
 Open new terminal.
 
-1. Install `java-common` if you don't have it already. `sudo apt install java-common`
 
-2. Install `git` if you don't have it already. `sudo apt install git`
+
+1. Install following packages. If you don't have them already. 
+
+Install `java-common` 
+
+`sudo apt install java-common`
+
+Install `git`  
+
+`sudo apt install git`
+
+Install `ca-certificates-java` 
+
+`sudo apt install ca-certificates-java`
+
 
 3. Clone this repo to your pc.
 ```
