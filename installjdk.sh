@@ -22,7 +22,7 @@ read selection
   esac
 done
 
-TAR_DIR=$(zenity --title "Select the .tar.gz file you downloaded" --file-selection --filename "${HOME}/Downloads/" --file-filter=""jdk*.tar.gz"" 2> /dev/null)
+TAR_DIR=$(zenity --title "Select the .tar.gz file you downloaded" --file-selection --filename "${HOME}/Downloads/" --file-filter=""*jdk*64*.tar.gz"" 2> /dev/null)
 
 if [ "$TAR_DIR" = "" ]; then
 	echo "You did not select a file. Mission abort."
