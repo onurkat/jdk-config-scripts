@@ -6,7 +6,7 @@
 echo "This script can install Oracle JDKs and Open JDKs from the .tar.gz file which provided by Oracle or java.net"
 echo "The script will generate the necessary configuration files for you to use the JDK." 
 echo "If you wish, you can set the newly installed JDK as the JDK to be used after installation."
-echo "Do you want to continue the installation?"
+echo "Do you want to continue the installation? [Y/n]"
 
 while : 
 do
