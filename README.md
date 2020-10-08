@@ -26,7 +26,8 @@ Install `ca-certificates-java`
 2. Clone this repo to your pc.
 ```
 cd ~/
-git clone https://github.com/onurkat/jdk-config-scripts.git ~/
+git clone https://github.com/onurkat/jdk-config-scripts.git ~/jdk-config-scripts
+
 ```
 
 3. Open your `~/.bashrc` with your favorite text editor. (vim, nano etc.) `vim ~/.bashrc`
