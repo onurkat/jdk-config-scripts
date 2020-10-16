@@ -36,7 +36,10 @@ Add following text to your `~/.bashrc` somewhere available.
 
 ```
 source ~/.jdkconfig > /dev/null 2>&1
-export PATH=$PATH:$JAVA_HOME/bin
+case "$PATH" in
+    *:$JAVA_HOME/bin*) ;;
+    *) export PATH=$PATH:$JAVA_HOME/bin ;;
+esac
 alias changejdk='source /usr/local/bin/changejdk.sh'
 alias installjdk='source /usr/local/bin/installjdk.sh'
 alias uninstalljdk='source /usr/local/bin/uninstalljdk.sh'
