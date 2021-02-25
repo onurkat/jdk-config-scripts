@@ -154,8 +154,19 @@ read INPUT2
   esac
 done
 
+if [ "1" = "$SELECTION" ]; then
+if [ ! -z $TEMP_TAR_FILE ]; then
+if [ -f $TEMP_TAR_FILE ]; then
+echo "Removing $TEMP_TAR_FILE to save space!"
+sudo rm -rf $TEMP_TAR_FILE
+fi
+fi
+fi
+
 echo "JAVA_HOME= $JAVA_HOME"
 echo "Added to PATH: $JAVA_HOME/bin"
 java -version
 javac -version
+
+
  
