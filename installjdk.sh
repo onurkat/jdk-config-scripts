@@ -3,26 +3,48 @@
 # Author : Onur Kat
 # Contact info : github.com/onurkat
 
-echo "This script can install Oracle JDKs and Open JDKs from the .tar.gz file which provided by Oracle or java.net"
-echo "The script will generate the necessary configuration files for you to use the JDK." 
-echo "If you wish, you can set the newly installed JDK as the JDK to be used after installation."
-echo "Do you want to continue the installation? [Y/n]"
-
+echo "Executing installjdk.sh ..."
+echo "Please select ..."
+echo "1) Download and install SapMachine JDK 11"
+echo "2) Install other JDK from .tar.gz file"
+echo "Press any other key to exit."
+SELECTION=3
+TAR_DIR=
 while : 
 do
-read selection
-  case $selection in
-	y | Y)	break
+read INPUT
+  case $INPUT in
+	1)	SELECTION=1
+		break
 		;;
-	n | N)	return			
+	2)	SELECTION=2
+		break			
 		;;
-	*)
-		echo "[Select y or n only!]"		
+	*)	return
 		;;
   esac
 done
 
+if [ "1" = "$SELECTION" ]; then
+
+TEMP_TAR_FILE="~/Downloads/sapmachine-jdk-11.0.10_linux-x64_bin.tar.gz"
+
+if [ -f "$TEMP_TAR_FILE" ];then
+sudo rm -rf $TEMP_TAR_FILE
+fi
+
+
+wget -O $TEMP_TAR_FILE 'https://github.com/SAP/SapMachine/releases/download/sapmachine-11.0.10/sapmachine-jdk-11.0.10_linux-x64_bin.tar.gz'
+
+TAR_DIR="$TEMP_TAR_FILE"
+
+fi
+
+if [ "$TAR_DIR" = "" ]; then
+
 TAR_DIR=$(zenity --title "Select the .tar.gz file you downloaded" --file-selection --filename "${HOME}/Downloads/" --file-filter=""*jdk*64*.tar.gz"" 2> /dev/null)
+
+fi
 
 if [ "$TAR_DIR" = "" ]; then
 	echo "You did not select a file. Mission abort."
