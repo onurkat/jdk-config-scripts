@@ -1,61 +1,21 @@
 # jdk-config-scripts
-JDK Configuration Scripts to install, uninstall Oracle JDK or OpenJDK on Ubuntu; make all JDK binaries recognizable by update-java-alternatives command, set JAVA_HOME and update PATH.
+JDK Configuration Scripts to;
+
+- Install, uninstall Oracle JDK, SAPMachine JDK or any other JDK based on OpenJDK for Linux based operating systems.
+- Make all JDK binaries recognizable by update-java-alternatives command
+- Set JAVA_HOME and update PATH when you switch your JDK.
 
 # Get Started
 Use following commands to setup for the scripts for easy access.
 
-Open new terminal.
-
-
-
-1. Install following packages. If you don't have them already. 
-
-Install `java-common` 
-
-`sudo apt install java-common`
-
-Install `git`  
-
-`sudo apt install git`
-
-Install `ca-certificates-java` 
-
-`sudo apt install ca-certificates-java`
-
-
-2. Clone this repo to your pc.
-```
-cd ~/
-git clone https://github.com/onurkat/jdk-config-scripts.git ~/jdk-config-scripts
+Open new terminal and execute following command to install the scripts. It will also install necessary packages.
 
 ```
-
-3. Open your `~/.bashrc` with your favorite text editor. (vim, nano etc.) `vim ~/.bashrc`
-
-Add following text to your `~/.bashrc` somewhere available.
-
+bash <(curl -s https://raw.githubusercontent.com/onurkat/jdk-config-scripts/master/installscripts.sh)
 ```
-source ~/.jdkconfig > /dev/null 2>&1
-case "$PATH" in
-    *:$JAVA_HOME/bin*) ;;
-    *) export PATH=$PATH:$JAVA_HOME/bin ;;
-esac
-alias changejdk='source /usr/local/bin/changejdk.sh'
-alias installjdk='source /usr/local/bin/installjdk.sh'
-alias uninstalljdk='source /usr/local/bin/uninstalljdk.sh'
-```
-4. Run these commands to move scripts to your system and make them executable.
+![image](https://user-images.githubusercontent.com/5752017/109224300-d2e21e00-77cc-11eb-9809-dc771005e7af.png)
 
-```
-cd ~/jdk-config-scripts
-sudo chmod +x *.sh
-sudo mv *.sh /usr/local/bin
-cd ~/
-sudo rm -rf ~/jdk-config-scripts
-source ~/.bashrc
-cd ~/
-
-```
+Press `y` and the script will do the rest!
 
 You are good to go!
 
@@ -63,28 +23,29 @@ Now you can use `installjdk`, `uninstalljdk` and `changejdk`
 
 # How to Use
 
-1. Download JDK .tar.gz file from Oracle's website. https://www.oracle.com/java/technologies/javase-downloads.html or java.net
+### Install JDK
 
-You need to sign up and log in for downloading the JDK files after Oracle's JDK licence update.
+Run `installjdk`
 
-Please check the file name before downloading. It has to be x64 to run.
+![image](https://user-images.githubusercontent.com/5752017/109223701-fc4e7a00-77cb-11eb-8a93-039eb18ce89e.png)
 
-2. Run `installjdk`
+- You can easily download and install SAP Machine JDK by pressing `1`
+- Or you can press `2` and install any other custom JDK from a .tar.gz file. A GUI window should pop up. Select the tar.gz file in the GUI window.
 
-Press Y to continue to installation. A GUI window should pop up. Select the tar.gz file in the GUI window.
+After the installation, the script will ask you that if you want to set the default JDK now. If so, press `Y`.
 
-After the installation, the script will ask you that if you want to set the default JDK now. If so, press Y.
+### Change JDK
 
-# Other Scripts
+Run `changejdk`
 
-1. `changejdk`
+![image](https://user-images.githubusercontent.com/5752017/109224400-ef7e5600-77cc-11eb-87d3-7912986776af.png)
 
-Use this script when you want to change your default JDK. Select it on the list and that's all.
+Use this script when you want to change your default JDK. Select it on the list and that's all. The script will do all necessary changes.
 
-2. `uninstalljdk`
+### Uninstall JDK
 
-Use this script to uninstall a JDK. Warning: Please use this uninstaller for the JDKs only installed manually.
+Run `uninstalljdk`
+
+Use this script to uninstall a JDK. Warning: Please use this uninstaller for the JDKs only installed by this script.
 
 If you want to uninstall a JDK that you installed with a package, use: `sudo apt purge <package_name>`
-
-
