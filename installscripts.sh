@@ -6,7 +6,7 @@
 echo "This script will install JDK Config Scripts from github.com/onurkat/jdk-config and necessary packages." 
 echo "Do you want to continue? [Y/n]"
 
-TEMP_DIR="~/jdk-config-scripts2"
+TEMP_DIR="~/jdk-config-scripts"
 
 while : 
 do
