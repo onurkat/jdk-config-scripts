@@ -3,10 +3,10 @@
 # Author : Onur Kat
 # Contact info : github.com/onurkat
 
-echo "This script will install JDK Config Scripts from github.com/onurkat/jdk-config and necessary packages." 
+echo "This script will install JDK Config Scripts from github.com/onurkat/jdk-config-scripts and necessary packages." 
 echo "Do you want to continue? [Y/n]"
 
-TEMP_DIR="~/jdk-config-scripts"
+TEMP_DIR="/tmp/jdk-config-scripts"
 
 while : 
 do
@@ -49,7 +49,7 @@ if [ -d "$TEMP_DIR" ];then
 sudo rm -rf $TEMP_DIR
 fi
 
-git clone https://github.com/onurkat/jdk-config-scripts.git $TEMP_DIR
+sudo git clone https://github.com/onurkat/jdk-config-scripts.git $TEMP_DIR
 
 if grep -q 'source ~/.jdkconfig' ~/.bashrc; then
 
