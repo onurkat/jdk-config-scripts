@@ -22,9 +22,13 @@ read selection
   esac
 done
 
+echo "Updating package list..."
+sudo apt-get update
+echo "Package list updated."
+
 echo "Step 1 : Installing required packages..."
 
-for REQUIRED_PKG in "java-common" "git" "ca-certificates-java"
+for REQUIRED_PKG in "java-common" "git" "ca-certificates-java" "wget"
 
 do
 
