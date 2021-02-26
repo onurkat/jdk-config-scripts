@@ -39,8 +39,8 @@ if [ "" = "$PKG_OK" ]; then
   sudo apt-get --yes install $REQUIRED_PKG 
   PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
   if [ "" = "$PKG_OK" ]; then
-  echo Installation of $REQUIRED_PKG failed. Mission abort.
-  return;
+  echo "Installation of $REQUIRED_PKG failed. Mission abort."
+  return
   fi
 fi
 
