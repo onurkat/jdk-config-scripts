@@ -4,6 +4,7 @@ JDK Configuration Scripts to;
 - Install, uninstall Oracle JDK, SAPMachine JDK or any other JDK based on OpenJDK for Linux based operating systems.
 - Make all JDK binaries recognizable by update-java-alternatives command
 - Set JAVA_HOME and update PATH when you switch your JDK.
+- **New: Option to download and install SAP Machine JDK 11 directly via `installjdk` script.**
 
 # Get Started
 Use following commands to setup for the scripts for easy access.
