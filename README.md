@@ -12,7 +12,7 @@ Use following commands to setup for the scripts for easy access.
 Open new terminal and execute following command to install the scripts. It will also install necessary packages.
 
 ```
-bash <(curl -s https://raw.githubusercontent.com/onurkat/jdk-config-scripts/master/installscripts.sh)
+source <(curl -s https://raw.githubusercontent.com/onurkat/jdk-config-scripts/master/installscripts.sh)
 ```
 ![image](https://user-images.githubusercontent.com/5752017/109224300-d2e21e00-77cc-11eb-9809-dc771005e7af.png)
 
