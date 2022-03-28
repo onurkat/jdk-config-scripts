@@ -34,7 +34,7 @@ sudo rm -rf $TEMP_TAR_FILE
 fi
 
 
-sudo wget -O $TEMP_TAR_FILE 'https://github.com/SAP/SapMachine/releases/download/sapmachine-11.0.10/sapmachine-jdk-11.0.10_linux-x64_bin.tar.gz'
+sudo wget -O $TEMP_TAR_FILE 'https://github.com/SAP/SapMachine/releases/download/sapmachine-11.0.14.1/sapmachine-jdk-11.0.14.1_linux-x64_bin.tar.gz'
 
 TAR_DIR="$TEMP_TAR_FILE"
 
