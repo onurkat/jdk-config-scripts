@@ -5,7 +5,7 @@
 
 echo "Executing installjdk.sh ..."
 echo "Please select ..."
-echo "1) Download and install SapMachine JDK 11"
+echo "1) Download and install SapMachine JDK 17"
 echo "2) Install other JDK from .tar.gz file"
 echo "Press any other key to exit."
 SELECTION=3
@@ -27,14 +27,14 @@ done
 
 if [ "1" = "$SELECTION" ]; then
 
-TEMP_TAR_FILE="/tmp/sapmachine-jdk-11.0.10_linux-x64_bin.tar.gz"
+TEMP_TAR_FILE="/tmp/sapmachine-jdk-17.0.6_linux-x64_bin.tar.gz"
 
 if [ -f $TEMP_TAR_FILE ]; then
 sudo rm -rf $TEMP_TAR_FILE
 fi
 
 
-sudo wget -O $TEMP_TAR_FILE 'https://github.com/SAP/SapMachine/releases/download/sapmachine-11.0.17/sapmachine-jdk-11.0.17_linux-x64_bin.tar.gz'
+sudo wget -O $TEMP_TAR_FILE 'https://github.com/SAP/SapMachine/releases/download/sapmachine-17.0.6/sapmachine-jdk-17.0.6_linux-x64_bin.tar.gz'
 
 TAR_DIR="$TEMP_TAR_FILE"
 
